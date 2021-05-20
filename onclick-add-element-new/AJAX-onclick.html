@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tien</title>
+</head>
+<body>
+    <input  class='test-input' type="text" /> 
+
+
+    <button id="text-button" >add</button>
+    <ul class="toolist">
+
+    </ul>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script >
+        // khởi tạo key 
+        // var  Storagekey = 'valueStorage';
+
+        // ko có  Storagekey
+        // var todolist =[
+        //     'ngô khắc tiến',
+        //     'thích nghe nhạc '
+        // ];  
+
+            // json-sever + axios 
+            var url = 'http://localhost:3000/todolist';
+
+            axios.get(url).then(function(res){
+                var items = res.data;
+                render(items);
+            })
+
+      //  var dataString = localStorage.getItem(Storagekey) ;   // nếu cái này chưa có gì 
+        // có  Storagekey , lấy giá trị từ Storagekey đổi lại giá trị xuất  ra 
+     //   var todolist  ;  // localStorage.getItem(Storagekey) giá trị từng key
+
+
+
+        // if(dataString){
+        //     todolist = JSON.parse( dataString  )
+        // }else{
+        //     todolist = [];
+        // }
+
+    
+
+        var  addbtn = document.getElementById('text-button');
+
+       // addbtn.onclick =additem  ;  // cách 1    // này chỉ thực hiện chỉ có 1 lần
+
+        //cách2
+        addbtn.addEventListener('click' , additem) ; // hàm này có thể thực hiện nhiều phương thức khi click 
+
+        function additem(){
+            var input = document.querySelector('.test-input'); 
+            var newItem = {
+                content :input.value
+                };
+            axios.post(url , newItem).then(function(item){
+                console.log('item saved' ,item);
+            }); 
+        }
+
+        function render(items){
+            var innerhtml = document.querySelector('.toolist');
+            var content = items.map(
+                function(item){
+                    return  '<li>' + item.content +'</li>';
+                }
+            );
+            innerhtml.innerHTML = content.join(' ');
+        }
+        // render(items);
+    </script>
+</body>
+</html>

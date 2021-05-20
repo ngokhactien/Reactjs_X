@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tiennk</title>
+</head>
+<body>
+    <span>Age :</span>
+    <select id="age-filter" >
+        <option >18</option>
+        <option >19</option>
+        <option >20</option>
+        <option >21</option>
+        <option >22</option>
+        <option >23</option>
+        <option >24</option>
+    </select>
+
+    <table id="student-table"></table>
+    
+    <script>
+        var students = [
+            { name : 'tiến  ' , age : 22 },
+            { name : 'duy   ' , age : 22 },
+            { name : 'Ngân  ' , age : 18 },
+            { name : 'Tân   ' , age : 20 },
+            { name : 'Nam   ' , age : 24 },
+            { name : 'Tuyền ' , age : 21 }
+        ];
+
+        var ageFilter = document.getElementById('age-filter');
+        ageFilter.addEventListener('change', onAgeFlter);
+
+        function onAgeFlter(){
+
+            var  selectAge = parseInt(ageFilter.value) ;
+
+            var filterStudent = students.filter(function(student){
+                return student.age === selectAge;
+            });
+            render(filterStudent);
+        }
+
+        function render(students){
+            var studentTable = document.getElementById('student-table');
+            var content =students.map(function(student){
+                return '<tr><td>' + student.name  +'</td><td>' + student.age +'</td></tr>';
+            });
+            studentTable.innerHTML = content.join('');
+        }
+        render(students);
+    </script>
+</body>
+</html>

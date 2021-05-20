@@ -1,0 +1,143 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [{
+    "name": "typicode" 
+    }
+  ],
+  
+  "products": [
+    {
+      "id": "9d10ff99-3728-44cc-8123-a40f73371abb",
+      "name": "Coffee - Flavoured",
+      "desciption": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+    },
+    {
+      "id": "1f6ab79e-3da3-4dc1-8b29-a6af636b5ce9",
+      "name": "Buffalo - Tenderloin",
+      "desciption": "quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/dddddd/000000"
+    },
+    {
+      "id": "0b2bc2ad-8a0c-40f2-b67b-b1b156fd33c7",
+      "name": "Pastry - Apple Muffins - Mini",
+      "desciption": "at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+    },
+    {
+      "id": "890793bb-1ca8-4510-aa0d-705cffb9bd5c",
+      "name": "Banana - Green",
+      "desciption": "fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+    },
+    {
+      "id": "176c5233-cc26-4131-9851-b755ee797fd8",
+      "name": "Beer - Sleeman Fine Porter",
+      "desciption": "in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+    },
+    {
+      "id": "d4f26763-2848-44cc-869d-f2f853b18b98",
+      "name": "Appetizer - Chicken Satay",
+      "desciption": "vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/dddddd/000000"
+    },
+    {
+      "id": "96657b00-cc1d-460f-b8d9-3b9169248fd3",
+      "name": "Pears - Bartlett",
+      "desciption": "aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/dddddd/000000"
+    },
+    {
+      "id": "c8a4410c-4995-4fc3-9d37-129336a13347",
+      "name": "Strawberries - California",
+      "desciption": "sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/dddddd/000000"
+    },
+    {
+      "id": "0438a4f3-5f7e-41ec-b232-46968335b9f7",
+      "name": "Blouse / Shirt / Sweater",
+      "desciption": "dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+    },
+    {
+      "id": "c852316a-c8d4-4645-94e5-bcf6358a062c",
+      "name": "Tea - Orange Pekoe",
+      "desciption": "cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+    },
+    {
+      "id": "ab4292bf-0df4-43f7-8c10-6753563d7190",
+      "name": "Chocolate - Liqueur Cups With Foil",
+      "desciption": "pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+    },
+    {
+      "id": "cd59953c-6496-47b0-b76b-7fbf9c2d9220",
+      "name": "Wine - Red, Lurton Merlot De",
+      "desciption": "etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/dddddd/000000"
+    },
+    {
+      "id": "e6052c67-97c3-4d04-9f62-07f0a29678a5",
+      "name": "Melon - Watermelon, Seedless",
+      "desciption": "turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/cc0000/ffffff"
+    },
+    {
+      "id": "4736f36a-c287-481c-86a2-e83042adadfe",
+      "name": "Oven Mitts - 15 Inch",
+      "desciption": "eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/5fa2dd/ffffff"
+    },
+    {
+      "id": "dc0b7925-f648-436b-a316-228d798c1d5c",
+      "name": "Ecolab - Ster Bac",
+      "desciption": "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/cc0000/ffffff"
+    },
+    {
+      "id": "d46a81f4-d396-46e2-b3fe-208a7a00c06d",
+      "name": "Cocoa Butter",
+      "desciption": "turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/dddddd/000000"
+    },
+    {
+      "id": "8037a623-ccc6-4c0b-a51d-20b05d44205d",
+      "name": "Vinegar - Tarragon",
+      "desciption": "fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+    },
+    {
+      "id": "577cba3b-1296-46fb-9229-61034f51dcad",
+      "name": "Cookie Trail Mix",
+      "desciption": "leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/cc0000/ffffff"
+    },
+    {
+      "id": "5a7ee39e-a022-4c02-82e3-80ef2c639f39",
+      "name": "Loaf Pan - 2 Lb, Foil",
+      "desciption": "molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/cc0000/ffffff"
+    },
+    {
+      "id": "7652da03-26e5-414a-b249-0c7df8fca39e",
+      "name": "Honey - Lavender",
+      "desciption": "praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum",
+      "imageUrl": "http://dummyimage.com/300x200.jpg/5fa2dd/ffffff"
+    }
+  ]
+}

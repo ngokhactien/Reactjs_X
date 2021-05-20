@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+</head>
+<body>
+    <input  class='test-input' type="text" /> 
+
+    <button onclick="additem()">add</button>
+    <ul class="toolist">
+
+    </ul>
+   
+    <script >
+        // ko có  Storagekey
+        var todolist =[
+            'ngô khắc tiến',
+            'thích nghe nhạc '
+        ];  
+
+
+        function additem(){
+            var input = document.querySelector('.test-input'); 
+            var newItem = input.value;
+            todolist.push(newItem);
+            render();
+            input.value = '';
+        }
+
+        function render(){
+            var htmlList = document.querySelector('.toolist');
+            var content = todolist.map(
+                function(item){
+                    return  '<li>' + item +'</li>'; 
+                }
+            );
+            htmlList.innerHTML = content.join('');
+        }
+        render();
+    </script>
+</body>
+</html>

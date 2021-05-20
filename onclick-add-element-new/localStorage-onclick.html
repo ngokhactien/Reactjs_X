@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tien</title>
+</head>
+<body>
+    <input  class='test-input' type="text" /> 
+
+
+    <button id="text-button" >add</button>
+    <ul class="toolist">
+
+    </ul>
+    <script >
+        // khởi tạo key 
+        var  Storagekey = 'valueStorage';
+        var dataString = localStorage.getItem(Storagekey) ;   // nếu cái này chưa có gì 
+
+        var htmlList = document.querySelector('.toolist');
+        var  addbtn = document.getElementById('text-button');     
+       // addbtn.onclick =additem  ;  // cách 1    // này chỉ thực hiện chỉ có 1 lần
+
+        //cách2
+        addbtn.addEventListener('click' , additem) ; // hàm này có thể thực hiện nhiều phương thức khi click 
+        htmlList.addEventListener('click' , onlistClick)
+        
+        //có  Storagekey , lấy giá trị từ Storagekey đổi lại giá trị xuất  ra 
+        var todolist  ;  // localStorage.getItem(Storagekey) giá trị từng key
+
+         function onlistClick (event){
+            var button = event.target;
+            var i = parseInt( button.dataset.id);
+            todolist.splice(i, 1);
+            render();
+            localStorage.setItem(Storagekey ,JSON.stringify(todolist ));
+         }
+        if(dataString){
+            todolist = JSON.parse( dataString  )
+        }else{
+            todolist = [];
+        }
+
+        function additem(){
+            var input = document.querySelector('.test-input'); 
+            var newItem = input.value;
+            console.log(input.value);
+
+            todolist.push(newItem);
+            render();
+            input.value = ' ';
+
+            //localStorage  // để nó vô mảng và lấy giá trị ko ko để mặc định là string
+            localStorage.setItem(Storagekey ,JSON.stringify(todolist ));
+
+        }
+
+        function render(){
+            
+            var content = todolist.map(
+                function(item , i){
+                    return  '<li>' + item +' <button data-id=" '+ i +'">delete</button></li>'; // i là vị trị lấy id từ 1 chạy lên
+                }
+            );
+            htmlList.innerHTML = content.join('');
+        }
+        render();
+    </script>
+</body>
+</html>

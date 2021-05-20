@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tien</title>
+</head>
+<body>
+    <input  class='test-input' type="text" /> 
+
+
+    <button id="text-button" >add</button>
+    <ul class="toolist">
+
+    </ul>
+    <script >
+        // khởi tạo key 
+        var  Storagekey = 'valueStorage';
+        
+        var dataString = localStorage.getItem(Storagekey) ;   // nếu cái này chưa có gì 
+
+        //có  Storagekey , lấy giá trị từ Storagekey đổi lại giá trị xuất  ra 
+        var todolist  ;  // localStorage.getItem(Storagekey) giá trị từng key
+
+        
+        if(dataString){
+            todolist = JSON.parse( dataString  )
+        }else{
+            todolist = [];
+        }
+
+        var input = document.querySelector('.test-input'); 
+        var  addbtn = document.getElementById('text-button');
+
+       // addbtn.onclick =additem  ;  // cách 1    // này chỉ thực hiện chỉ có 1 lần
+
+        //cách2
+        addbtn.addEventListener('click' , additem) ; // hàm này có thể thực hiện nhiều phương thức khi click 
+    
+        input.addEventListener('change',updatesessionstorage)
+
+        
+        input.value = sessionStorage.getItem('item');  // dòng này tại vị trí input nhận giá trị từ sessionStorage.getItem 
+        function updatesessionstorage(){
+            sessionStorage.setItem( 'item' , input.value);     // hàm lấy giá trị từ khi nhập input vào đẩy lên sessionStorage
+        }
+        
+        function additem(){
+        
+            var newItem = input.value;
+            console.log(input.value);
+
+            todolist.push(newItem);
+            render();
+            input.value = ' ';
+
+            //localStorage  // để nó vô mảng và lấy giá trị ko ko để mặc định là string
+            localStorage.setItem(Storagekey ,JSON.stringify(todolist ));
+
+        }
+
+        function render(){
+            var innerhtml = document.querySelector('.toolist');
+            var content = todolist.map(
+                function(item){
+                    return  '<li>' + item +'</li>';
+                }
+            );
+            innerhtml.innerHTML = content.join(' ');
+        }
+         render();
+    </script>
+</body>
+</html>
